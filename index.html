@@ -291,7 +291,7 @@
 
     .timeline {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr 0.9fr;
+      grid-template-columns: 1.2fr auto 0.9fr;
       gap: 14px;
       align-items: stretch;
     }
@@ -328,6 +328,44 @@
     .center-lane {
       background: #fdfefe;
       border: 2px solid #b8dada;
+    }
+
+    .enablement-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .enablement-layer {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 11px;
+      background: #fbfdff;
+    }
+
+    .enablement-layer.foundation {
+      background: #f1f8f8;
+    }
+
+    .enablement-layer h4 {
+      margin: 0 0 6px;
+      font-size: 14px;
+      color: var(--teal-dark);
+    }
+
+    .transition-arrow {
+      display: grid;
+      place-items: center;
+      color: var(--teal-dark);
+      font-weight: 900;
+      font-size: 26px;
+      min-width: 32px;
+    }
+
+    .transition-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .arch-band {
@@ -650,6 +688,11 @@
         grid-template-columns: 1fr;
       }
 
+      .transition-arrow {
+        min-height: 24px;
+        transform: rotate(90deg);
+      }
+
       .skill-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -747,10 +790,10 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <div class="eyebrow">Head of Data Science & Analytics</div>
-        <h1 id="hero-title">Enterprise data, analytics and AI leader for industrial digital transformation.</h1>
+        <div class="eyebrow">Head of Data - Platform & Enablement</div>
+        <h1 id="hero-title">Platform enablement leader helping domain teams scale data products in a data mesh operating model.</h1>
         <p class="subtitle">
-          Siemens-scale leader building data platforms, AI products and analytics ecosystems that convert operational data into measurable business value.
+          Siemens-scale data leader enabling domain teams with shared platform capabilities, governed Data Vault patterns, Collibra workflows, dbt standards, data quality, MLOps and reliable delivery foundations.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#fit">View Siemens Role Fit</a>
@@ -773,37 +816,42 @@
     <section id="leadership">
       <div class="section-head">
         <h2>Operating Model</h2>
-        <p class="section-note">A data-as-a-product organization positioned between platform capability and business domain adoption.</p>
+        <p class="section-note">A platform enablement model that helps domain teams mature from central support dependency toward governed, domain-owned data products.</p>
       </div>
-      <div class="timeline" role="img" aria-label="Data platform on the left, data and analytics development in the middle, consuming domains on the right, enterprise architecture below">
-        <div class="lane">
-          <div class="lane-title">Data Platform Team</div>
-          <ul>
-            <li>Data platform services</li>
-            <li>Storage, compute and access</li>
-            <li>Reusable tooling and engineering patterns</li>
-            <li>Reliability, scalability and platform foundations</li>
-          </ul>
-        </div>
+      <div class="timeline" role="img" aria-label="Data platform and enablement team builds shared capabilities and transitions ownership to maturing domain data product teams">
         <div class="lane center-lane">
-          <div class="lane-title">Data & Analytics Development</div>
-          <ul>
-            <li>Head of Data & Analytics Development</li>
-            <li>Product Manager for Data Products</li>
-            <li>Data scientists, data engineers, BI and analytics engineers</li>
-            <li>Data products, ML/AI products, semantic layers and dashboards</li>
-          </ul>
+          <div class="lane-title">Data Platform & Enablement Team</div>
+          <div class="enablement-stack">
+            <div class="enablement-layer">
+              <h4>Analytics & AI Enablement Layer</h4>
+              <ul>
+                <li>Analytics development patterns transitioning into domain teams</li>
+                <li>BI, semantic models, AI/ML patterns and product accelerators</li>
+                <li>Coaching domains on data product design, quality and adoption</li>
+              </ul>
+            </div>
+            <div class="enablement-layer foundation">
+              <h4>Platform Services Foundation</h4>
+              <ul>
+                <li>Storage, compute, access, Data Vault patterns and pipeline reliability</li>
+                <li>Shared tooling, reusable engineering patterns and governed delivery standards</li>
+                <li>Platform-as-a-product roadmap, onboarding and developer velocity</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="transition-arrow" aria-hidden="true">→</div>
         <div class="lane">
-          <div class="lane-title">Domain Data Product Teams</div>
+          <div class="lane-title">Maturing Domain Data Product Teams</div>
           <ul>
-            <li>Sales and marketing</li>
-            <li>Finance and commercial analytics</li>
-            <li>Engineering and product teams</li>
-            <li>Operations, supply chain and customer-facing product ownership</li>
+            <li>Own business meaning, priorities and product outcomes</li>
+            <li>Adopt shared dbt, Collibra, DQ, MLOps and pipeline standards</li>
+            <li>Build and operate domain data products with platform support</li>
+            <li>Improve product velocity, trust, reuse and end-to-end transparency</li>
           </ul>
         </div>
       </div>
+      <p class="transition-note">Transition focus: evolve from central delivery of analytics toward domain-owned data products enabled by a shared platform, common governance and reusable engineering patterns.</p>
       <div class="arch-band" aria-label="Enterprise architecture coordination layer">
         <div>Enterprise Cloud Architect</div>
         <div>Enterprise Application Architect</div>
@@ -811,7 +859,7 @@
       </div>
       <div class="card" style="margin-top: 14px;">
         <h3>Shared Platform Capabilities</h3>
-        <p>Reusable capabilities that help domain data product teams build faster while staying governed, reliable and interoperable.</p>
+        <p>The Product Manager treats the platform as a product: developer velocity, tooling roadmap, domain onboarding, adoption, standards and reusable capability packaging.</p>
         <div class="tech-cloud" style="margin-top: 12px;">
           <span class="pill">dbt transformation standards</span>
           <span class="pill">Collibra governance workflows</span>
@@ -824,7 +872,7 @@
         </div>
       </div>
       <p class="tagline">
-        Interview message: the team is deliberately positioned between business demand and platform capability, with enterprise architecture providing guardrails across cloud, application and data platform decisions.
+        Interview message: the team is deliberately positioned to translate domain strategy into platform capabilities, with enterprise architecture providing guardrails across cloud, application and data platform decisions.
       </p>
     </section>
 
@@ -1072,14 +1120,14 @@
         <article class="card">
           <h3>30-60-90 day plan</h3>
           <div class="day-plan">
-            <div><strong>30</strong><p>Map stakeholders, current data products, KPIs, team skills and pain points.</p></div>
-            <div><strong>60</strong><p>Prioritize 3 to 5 use cases, clarify ownership, quality gaps and roadmap.</p></div>
-            <div><strong>90</strong><p>Launch first MVPs, establish adoption measures, governance cadence and quality metrics.</p></div>
+            <div><strong>30</strong><p>Map domain maturity, tool adoption, legacy pipelines, data contracts and platform friction points.</p></div>
+            <div><strong>60</strong><p>Define enablement roadmap for dbt, Collibra, data quality, storage, MLOps and pipeline reliability.</p></div>
+            <div><strong>90</strong><p>Operationalize certification workflows, onboarding patterns, reliability metrics and domain self-service guardrails.</p></div>
           </div>
         </article>
       </div>
       <div class="quote">
-        "I bring Siemens context, enterprise data architecture depth, AI/data product execution, and the leadership experience to align global stakeholders around trusted data products that improve operational outcomes."
+        "I bridge domain ambition and platform execution: helping teams move from legacy, centrally supported analytics toward governed, domain-owned data products enabled by reliable shared platform capabilities."
       </div>
     </section>
 
