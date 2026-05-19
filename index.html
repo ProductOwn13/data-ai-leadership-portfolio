@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data, Analytics & AI Leadership Portfolio</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5d6b7a;
+      --line: #d8e0e7;
+      --paper: #f7f9fb;
+      --panel: #ffffff;
+      --teal: #008c8c;
+      --teal-dark: #00646b;
+      --green: #4b8b3b;
+      --gold: #b47b1f;
+      --blue: #2f6f9f;
+      --red: #a64646;
+      --shadow: 0 14px 35px rgba(20, 35, 50, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border: 3px solid var(--teal);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    nav a {
+      padding: 7px 10px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: #e9f3f3;
+      color: var(--teal-dark);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 24px 64px;
+    }
+
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 28px;
+      align-items: center;
+      padding: 18px 0 30px;
+    }
+
+    .eyebrow {
+      color: var(--teal-dark);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.02;
+      letter-spacing: 0;
+      max-width: 820px;
+    }
+
+    .subtitle {
+      margin: 18px 0 0;
+      max-width: 790px;
+      color: #334251;
+      font-size: clamp(17px, 2.1vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      padding: 10px 13px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+    }
+
+    .hero-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfdff;
+      min-height: 92px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 86px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(25px, 3vw, 36px);
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      max-width: 560px;
+      font-size: 15px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 8px 18px rgba(20, 35, 50, 0.05);
+    }
+
+    .card h3 {
+      margin: 0 0 9px;
+      font-size: 17px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: #334251;
+      font-weight: 700;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .skill {
+      min-height: 142px;
+      border-left: 5px solid var(--teal);
+    }
+
+    .skill:nth-child(2n) { border-left-color: var(--blue); }
+    .skill:nth-child(3n) { border-left-color: var(--green); }
+    .skill:nth-child(4n) { border-left-color: var(--gold); }
+
+    .rank {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #e9f3f3;
+      color: var(--teal-dark);
+      font-weight: 800;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .lane {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .lane-title {
+      font-size: 14px;
+      color: #fff;
+      background: var(--teal-dark);
+      border-radius: 6px;
+      padding: 9px 10px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .lane:nth-child(3) .lane-title { background: var(--blue); }
+    .lane ul, .case ul, .compact-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .lane li, .case li, .compact-list li {
+      margin: 7px 0;
+    }
+
+    .center-lane {
+      background: #fdfefe;
+      border: 2px solid #b8dada;
+    }
+
+    .arch-band {
+      margin-top: 14px;
+      border: 1px dashed #96b7bd;
+      background: #f4fbfb;
+      border-radius: 8px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      color: #31505b;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .arch-band div {
+      background: #fff;
+      border: 1px solid #cfe4e4;
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .ecosystem {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .eco-col {
+      border-right: 1px solid var(--line);
+      min-width: 0;
+    }
+
+    .eco-col:last-child { border-right: 0; }
+
+    .eco-head {
+      padding: 13px;
+      color: #fff;
+      font-weight: 900;
+      background: var(--teal-dark);
+    }
+
+    .eco-col:nth-child(2) .eco-head { background: var(--green); }
+    .eco-col:nth-child(3) .eco-head { background: var(--blue); }
+
+    .eco-cell {
+      min-height: 116px;
+      padding: 13px;
+      border-top: 1px solid var(--line);
+    }
+
+    .eco-label {
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 7px;
+      letter-spacing: 0.06em;
+    }
+
+    .eco-cell p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .domain-matrix {
+      display: grid;
+      gap: 12px;
+    }
+
+    .domain-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1.15fr 1.25fr 1.1fr 1.15fr 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(20, 35, 50, 0.04);
+    }
+
+    .domain-row.header {
+      box-shadow: none;
+      background: var(--teal-dark);
+      color: #fff;
+      font-weight: 900;
+      position: sticky;
+      top: 58px;
+      z-index: 8;
+    }
+
+    .domain-cell {
+      padding: 13px;
+      border-right: 1px solid var(--line);
+      min-width: 0;
+    }
+
+    .domain-row.header .domain-cell {
+      border-right-color: rgba(255, 255, 255, 0.28);
+      font-size: 13px;
+    }
+
+    .domain-cell:last-child {
+      border-right: 0;
+    }
+
+    .domain-name {
+      background: #f2f8f8;
+      color: var(--teal-dark);
+      font-weight: 900;
+      font-size: 15px;
+    }
+
+    .domain-cell ul {
+      margin: 0;
+      padding-left: 17px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .domain-cell li {
+      margin: 5px 0;
+    }
+
+    .domain-chip {
+      display: inline-block;
+      margin: 0 5px 6px 0;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #eef7f2;
+      color: #27562d;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .governance-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .flow-step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      position: relative;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--teal-dark);
+      font-weight: 900;
+      background: var(--paper);
+      padding: 1px 3px;
+    }
+
+    .flow-step h3 {
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .split-flow {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .split-node {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 116px;
+    }
+
+    .split-node h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+
+    .split-node p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .split-node.source {
+      border-left: 5px solid var(--teal);
+    }
+
+    .split-branch {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      position: relative;
+    }
+
+    .split-branch::before {
+      content: ">";
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--teal-dark);
+      font-weight: 900;
+    }
+
+    .split-node.operational {
+      border-left: 5px solid var(--blue);
+    }
+
+    .split-node.business {
+      border-left: 5px solid var(--green);
+    }
+
+    .split-node.analytic {
+      border-left: 5px solid var(--gold);
+    }
+
+    .split-node.consumption {
+      border-left: 5px solid var(--red);
+    }
+
+    .case {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .case-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .case-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .impact {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 9px;
+      border-radius: 6px;
+      background: #eef7f2;
+      color: #27562d;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .tech-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      color: #314150;
+      font-weight: 700;
+    }
+
+    .readiness {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .day-plan {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .quote {
+      background: #17212b;
+      color: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    footer {
+      padding: 28px 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .hero, .grid-3, .grid-2, .readiness, .case, .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .governance-flow, .day-plan, .split-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .split-branch {
+        grid-template-rows: auto;
+      }
+
+      .split-branch::before {
+        display: none;
+      }
+
+      .domain-row,
+      .domain-row.header {
+        grid-template-columns: 1fr;
+        position: static;
+      }
+
+      .domain-row.header {
+        display: none;
+      }
+
+      .domain-cell {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .domain-cell:last-child {
+        border-bottom: 0;
+      }
+
+      .domain-cell::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 6px;
+      }
+
+      .domain-name::before {
+        display: none;
+      }
+
+      .flow-step:not(:last-child)::after { display: none; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+
+    @media (max-width: 700px) {
+      main { padding: 18px 14px 44px; }
+      .topbar-inner { padding: 10px 14px; align-items: start; flex-direction: column; }
+      nav { justify-content: start; }
+      .metric-grid, .skill-grid, .ecosystem, .arch-band {
+        grid-template-columns: 1fr;
+      }
+      .eco-col { border-right: 0; border-bottom: 1px solid var(--line); }
+      .eco-col:last-child { border-bottom: 0; }
+      .hero { min-height: auto; }
+    }
+
+    @media print {
+      .topbar { position: static; }
+      nav, .hero-actions { display: none; }
+      body { background: #fff; }
+      main { max-width: none; padding: 0; }
+      section, .hero { break-inside: avoid; }
+      .card, .hero-panel, .case-card, .lane, .flow-step { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">DA</span>
+        <span>Data & AI Leadership Portfolio</span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#governance">Governance</a>
+        <a href="#fit">Siemens Fit</a>
+        <a href="#cases">Cases</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Head of Data Science & Analytics</div>
+        <h1 id="hero-title">Enterprise data, analytics and AI leader for industrial digital transformation.</h1>
+        <p class="subtitle">
+          Siemens-scale leader building data platforms, AI products and analytics ecosystems that convert operational data into measurable business value.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#fit">View Siemens Role Fit</a>
+          <a class="button" href="#governance">Governance Model</a>
+          <a class="button" href="#cases">Case Studies</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Key leadership metrics">
+        <div class="metric-grid">
+          <div class="metric"><strong>16.4</strong><span>Years total experience</span></div>
+          <div class="metric"><strong>25</strong><span>Data professionals led</span></div>
+          <div class="metric"><strong>USD 10M</strong><span>Annual budget ownership</span></div>
+          <div class="metric"><strong>USD 200M</strong><span>Revenue influence</span></div>
+          <div class="metric"><strong>USD 1M+</strong><span>Infrastructure savings</span></div>
+          <div class="metric"><strong>20%</strong><span>Data quality incident reduction</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="leadership">
+      <div class="section-head">
+        <h2>Operating Model</h2>
+        <p class="section-note">A data-as-a-product organization positioned between platform capability and business domain adoption.</p>
+      </div>
+      <div class="timeline" role="img" aria-label="Data platform on the left, data and analytics development in the middle, consuming domains on the right, enterprise architecture below">
+        <div class="lane">
+          <div class="lane-title">Data Platform Team</div>
+          <ul>
+            <li>Data platform services</li>
+            <li>Storage, compute and access</li>
+            <li>Reusable tooling and engineering patterns</li>
+            <li>Reliability, scalability and platform foundations</li>
+          </ul>
+        </div>
+        <div class="lane center-lane">
+          <div class="lane-title">Data & Analytics Development</div>
+          <ul>
+            <li>Head of Data & Analytics Development</li>
+            <li>Product Manager for Data Products</li>
+            <li>Data scientists, data engineers, BI and analytics engineers</li>
+            <li>Data products, ML/AI products, semantic layers and dashboards</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <div class="lane-title">Domain Data Product Teams</div>
+          <ul>
+            <li>Sales and marketing</li>
+            <li>Finance and commercial analytics</li>
+            <li>Engineering and product teams</li>
+            <li>Operations, supply chain and customer-facing product ownership</li>
+          </ul>
+        </div>
+      </div>
+      <div class="arch-band" aria-label="Enterprise architecture coordination layer">
+        <div>Enterprise Cloud Architect</div>
+        <div>Enterprise Application Architect</div>
+        <div>Enterprise Platform Architect - Data</div>
+      </div>
+      <div class="card" style="margin-top: 14px;">
+        <h3>Shared Platform Capabilities</h3>
+        <p>Reusable capabilities that help domain data product teams build faster while staying governed, reliable and interoperable.</p>
+        <div class="tech-cloud" style="margin-top: 12px;">
+          <span class="pill">dbt transformation standards</span>
+          <span class="pill">Collibra governance workflows</span>
+          <span class="pill">Data quality observability</span>
+          <span class="pill">Pipeline monitoring and issue management</span>
+          <span class="pill">MLOps templates and model lifecycle</span>
+          <span class="pill">Storage and compute provisioning</span>
+          <span class="pill">API and event product standards</span>
+          <span class="pill">Data product certification</span>
+        </div>
+      </div>
+      <p class="tagline">
+        Interview message: the team is deliberately positioned between business demand and platform capability, with enterprise architecture providing guardrails across cloud, application and data platform decisions.
+      </p>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Role-Critical Strengths</h2>
+        <p class="section-note">The skill priority is based on the Siemens role, your profile, and 123 senior data/analytics/AI LinkedIn postings.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="card skill"><span class="rank">1</span><h3>Stakeholder influence</h3><p>Aligns domains, IT, architects and executives around a shared data journey.</p></article>
+        <article class="card skill"><span class="rank">2</span><h3>Business value</h3><p>Connects data products to revenue, cost, productivity, quality and decision speed.</p></article>
+        <article class="card skill"><span class="rank">3</span><h3>Data and AI strategy</h3><p>Owns roadmap, prioritization and transformation from use case to scaled capability.</p></article>
+        <article class="card skill"><span class="rank">4</span><h3>People leadership</h3><p>Builds teams, capability, operating models and delivery rhythm.</p></article>
+        <article class="card skill"><span class="rank">5</span><h3>Data products</h3><p>Turns fragmented demand into reusable, governed and adopted data products.</p></article>
+        <article class="card skill"><span class="rank">6</span><h3>Cloud platforms</h3><p>AWS, Snowflake, Databricks, Data Vault, APIs, pipelines and platform modernization.</p></article>
+        <article class="card skill"><span class="rank">7</span><h3>Trusted data</h3><p>Governance, quality rules, ownership, lineage, data contracts and certification.</p></article>
+        <article class="card skill"><span class="rank">8</span><h3>Operations translation</h3><p>Connects industrial analytics experience to material flow, delivery and supply reliability.</p></article>
+        <article class="card skill"><span class="rank">9</span><h3>AI and predictive analytics</h3><p>Forecasting, anomaly detection, digital twins, reinforcement learning, RAG and agents.</p></article>
+        <article class="card skill"><span class="rank">10</span><h3>Agile delivery</h3><p>Centralized intake, MVP delivery, prioritization, adoption and execution discipline.</p></article>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="section-head">
+        <h2>Signature Achievements</h2>
+        <p class="section-note">Proof points that demonstrate platform, product, AI, financial and organizational leadership.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card"><h3>Snowflake migration</h3><p>Led Redshift to Snowflake modernization with improved scalability and workload isolation.</p><span class="impact">USD 1M+ savings</span></article>
+        <article class="card"><h3>Enterprise Data Vault</h3><p>Designed a unified model across telemetry, customer and service datasets to reduce silos.</p><span class="impact">Customer 360 enabled</span></article>
+        <article class="card"><h3>Data science function</h3><p>Built dedicated capability for asset performance, reliability, market intelligence and ROI models.</p><span class="impact">USD 200M influence</span></article>
+        <article class="card"><h3>Pipeline modernization</h3><p>Moved fragile workflows toward Python-based pipelines, validation and monitoring.</p><span class="impact">20% fewer incidents</span></article>
+        <article class="card"><h3>Analytics democratization</h3><p>Enabled notebook and self-service analytics patterns over the data foundation.</p><span class="impact">50% faster delivery</span></article>
+        <article class="card"><h3>Industrial AI products</h3><p>Led and shaped digital twin, predictive analytics and reinforcement-learning product work.</p><span class="impact">Predictive operations</span></article>
+      </div>
+    </section>
+
+    <section id="ecosystem">
+      <div class="section-head">
+        <h2>Data Product Ecosystem</h2>
+        <p class="section-note">Domain-wise view of use cases, data products, ML/AI products, analytical products and tools from the data domains workbook.</p>
+      </div>
+      <div class="domain-matrix">
+        <div class="domain-row header" aria-hidden="true">
+          <div class="domain-cell">Data Domain</div>
+          <div class="domain-cell">Use Cases</div>
+          <div class="domain-cell">Data Products</div>
+          <div class="domain-cell">ML & AI Products</div>
+          <div class="domain-cell">Analytical & Self-Service BI</div>
+          <div class="domain-cell">Tools / Enablement</div>
+        </div>
+
+        <article class="domain-row">
+          <div class="domain-cell domain-name" data-label="Data Domain">Sales</div>
+          <div class="domain-cell" data-label="Use Cases">
+            <ul>
+              <li>Contract negotiation support</li>
+              <li>Energy market forecasting</li>
+              <li>Modernization and upgrade evaluation</li>
+              <li>ROI and break-even calculation</li>
+              <li>Pricing model evaluation</li>
+              <li>Sales pipeline tracking</li>
+            </ul>
+          </div>
+          <div class="domain-cell" data-label="Data Products">
+            <span class="domain-chip">Fuel Price API</span>
+            <span class="domain-chip">Energy Price API</span>
+            <span class="domain-chip">Weather API</span>
+            <span class="domain-chip">Mod Intelligence</span>
+          </div>
+          <div class="domain-cell" data-label="ML & AI Products">
+            <span class="domain-chip">OH Calculator</span>
+            <span class="domain-chip">Region-wise Model</span>
+            <span class="domain-chip">Revenue & Profitability</span>
+          </div>
+          <div class="domain-cell" data-label="Analytical & Self-Service BI">
+            <span class="domain-chip">Plant Playbooks</span>
+            <span class="domain-chip">Delta Gains</span>
+            <span class="domain-chip">Pricing What-if</span>
+            <span class="domain-chip">Competitive Benchmarking</span>
+            <span class="domain-chip">Multi-Year Revenue Observability</span>
+          </div>
+          <div class="domain-cell" data-label="Tools / Enablement">
+            <span class="domain-chip">Automated Energy Market Modeling Pipeline</span>
+          </div>
+        </article>
+
+        <article class="domain-row">
+          <div class="domain-cell domain-name" data-label="Data Domain">Finance</div>
+          <div class="domain-cell" data-label="Use Cases">
+            <ul>
+              <li>360 Finance</li>
+              <li>Legal and contracts intelligence</li>
+              <li>Revenue intelligence</li>
+            </ul>
+          </div>
+          <div class="domain-cell" data-label="Data Products">
+            <span class="domain-chip">Finance 360 foundation</span>
+          </div>
+          <div class="domain-cell" data-label="ML & AI Products">
+            <span class="domain-chip">RAG FinOps Assistant</span>
+            <span class="domain-chip">Doc Intelligence</span>
+          </div>
+          <div class="domain-cell" data-label="Analytical & Self-Service BI">
+            <span class="domain-chip">Commercial Analytics</span>
+          </div>
+          <div class="domain-cell" data-label="Tools / Enablement">
+            <span class="domain-chip">Cortex AI</span>
+          </div>
+        </article>
+
+        <article class="domain-row">
+          <div class="domain-cell domain-name" data-label="Data Domain">Service Engineering - LTP</div>
+          <div class="domain-cell" data-label="Use Cases">
+            <ul>
+              <li>Performance forecasting</li>
+              <li>Early anomaly detection</li>
+              <li>Maintenance planning</li>
+            </ul>
+          </div>
+          <div class="domain-cell" data-label="Data Products">
+            <span class="domain-chip">PM API</span>
+            <span class="domain-chip">CBSI API</span>
+            <span class="domain-chip">Outage API</span>
+          </div>
+          <div class="domain-cell" data-label="ML & AI Products">
+            <span class="domain-chip">Predictive performance models</span>
+            <span class="domain-chip">Anomaly detection models</span>
+          </div>
+          <div class="domain-cell" data-label="Analytical & Self-Service BI">
+            <span class="domain-chip">Maintenance planning analytics</span>
+          </div>
+          <div class="domain-cell" data-label="Tools / Enablement">
+            <span class="domain-chip">Service engineering API layer</span>
+          </div>
+        </article>
+
+        <article class="domain-row">
+          <div class="domain-cell domain-name" data-label="Data Domain">Service Engineering - Controls</div>
+          <div class="domain-cell" data-label="Use Cases">
+            <ul>
+              <li>Emissions reduction</li>
+              <li>Efficiency improvement</li>
+            </ul>
+          </div>
+          <div class="domain-cell" data-label="Data Products">
+            <span class="domain-chip">Controls data foundation</span>
+          </div>
+          <div class="domain-cell" data-label="ML & AI Products">
+            <span class="domain-chip">Reinforcement Learning</span>
+          </div>
+          <div class="domain-cell" data-label="Analytical & Self-Service BI">
+            <span class="domain-chip">Efficiency analytics</span>
+            <span class="domain-chip">Emissions analytics</span>
+          </div>
+          <div class="domain-cell" data-label="Tools / Enablement">
+            <span class="domain-chip">Industrial AI experimentation</span>
+          </div>
+        </article>
+
+        <article class="domain-row">
+          <div class="domain-cell domain-name" data-label="Data Domain">Data Platform</div>
+          <div class="domain-cell" data-label="Use Cases">
+            <ul>
+              <li>Customer 360</li>
+              <li>Data quality</li>
+              <li>Reducing time to market for digital products and services</li>
+              <li>Data governance</li>
+              <li>Productivity and thought leadership</li>
+            </ul>
+          </div>
+          <div class="domain-cell" data-label="Data Products">
+            <span class="domain-chip">Data Vault 2.0</span>
+            <span class="domain-chip">Agents for Quality Monitoring</span>
+            <span class="domain-chip">Reusable APIs</span>
+          </div>
+          <div class="domain-cell" data-label="ML & AI Products">
+            <span class="domain-chip">Quality monitoring agents</span>
+            <span class="domain-chip">AI-enabled platform productivity</span>
+          </div>
+          <div class="domain-cell" data-label="Analytical & Self-Service BI">
+            <span class="domain-chip">Quality Dashboards</span>
+          </div>
+          <div class="domain-cell" data-label="Tools / Enablement">
+            <span class="domain-chip">Talend to Python Migration</span>
+            <span class="domain-chip">DBT Transformation</span>
+            <span class="domain-chip">Centralized Kanban Intake</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="governance">
+      <div class="section-head">
+        <h2>Governance Model</h2>
+        <p class="section-note">A data mesh-aligned federated governance model using Collibra, Data Vault, shared platform capabilities and domain-owned data products.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Operating thesis</h3>
+          <p>The platform team owns shared capabilities, standards, Data Vault patterns, engineering enablement and governance workflows. Domain teams own data product meaning, priorities, adoption and quality expectations.</p>
+          <div class="tagline">Collibra is the system of engagement for ownership, glossary, lineage, quality, certification, policies, issue routing and AI traceability.</div>
+        </article>
+        <article class="card">
+          <h3>Minimum viable controls</h3>
+          <ul class="compact-list">
+            <li>Business owner and technical owner</li>
+            <li>Glossary terms and KPI definitions</li>
+            <li>Source-to-consumption lineage</li>
+            <li>Critical data elements and quality rules</li>
+            <li>Access policy, certification status and issue workflow</li>
+          </ul>
+        </article>
+      </div>
+      <div class="split-flow" aria-label="Split operational and analytical data product flow">
+        <div class="split-node source"><h3>Source Systems</h3><p>SAP, legacy systems, domain applications and event sources.</p></div>
+        <div class="split-node source"><h3>Raw Vault</h3><p>Source-aligned, historized and governed data foundation.</p></div>
+        <div class="split-branch">
+          <div class="split-node operational"><h3>Operational Data Products</h3><p>Near-real-time, source-aligned products for operational decisioning.</p></div>
+          <div class="split-node business"><h3>Business Vault</h3><p>Harmonized business rules, KPI logic and reusable transformations.</p></div>
+        </div>
+        <div class="split-branch">
+          <div class="split-node consumption"><h3>AI/ML & Agentic Systems</h3><p>AI/ML use cases, autonomous workflows and operational interventions.</p></div>
+          <div class="split-node analytic"><h3>Analytical Data Products</h3><p>Reporting, visibility, end-to-end transparency and trusted KPI products.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit">
+      <div class="section-head">
+        <h2>Siemens Deliver & Material Supply Fit</h2>
+        <p class="section-note">How the existing industrial data leadership story maps into logistics, material supply and data domain leadership.</p>
+      </div>
+      <div class="readiness">
+        <article class="card">
+          <h3>First-wave data products</h3>
+          <ul class="compact-list">
+            <li>Material shortage early-warning product</li>
+            <li>OTIF and delivery reliability cockpit</li>
+            <li>Supplier reliability and risk score</li>
+            <li>Inventory optimization and service-level tradeoff views</li>
+            <li>Logistics exception detection and planner alerts</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>30-60-90 day plan</h3>
+          <div class="day-plan">
+            <div><strong>30</strong><p>Map stakeholders, current data products, KPIs, team skills and pain points.</p></div>
+            <div><strong>60</strong><p>Prioritize 3 to 5 use cases, clarify ownership, quality gaps and roadmap.</p></div>
+            <div><strong>90</strong><p>Launch first MVPs, establish adoption measures, governance cadence and quality metrics.</p></div>
+          </div>
+        </article>
+      </div>
+      <div class="quote">
+        "I bring Siemens context, enterprise data architecture depth, AI/data product execution, and the leadership experience to align global stakeholders around trusted data products that improve operational outcomes."
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-head">
+        <h2>Selected Case Studies</h2>
+        <p class="section-note">Use these as quick interview anchors when asked for proof, impact or leadership examples.</p>
+      </div>
+      <div class="case">
+        <article class="case-card">
+          <h3>Enterprise Data Platform Modernization</h3>
+          <ul>
+            <li><strong>Problem:</strong> High compute cost, scaling limitations and workload contention.</li>
+            <li><strong>Action:</strong> Led Redshift to Snowflake strategy, architecture and standardization.</li>
+            <li><strong>Technology:</strong> Snowflake, AWS Redshift, SQL, Python.</li>
+          </ul>
+          <span class="impact">USD 1M+ cumulative savings</span>
+        </article>
+        <article class="case-card">
+          <h3>Data Vault And Customer 360</h3>
+          <ul>
+            <li><strong>Problem:</strong> Product data silos and fragmented customer views.</li>
+            <li><strong>Action:</strong> Designed Data Vault 2.0 model and unified enterprise entities.</li>
+            <li><strong>Technology:</strong> Data Vault 2.0, Snowflake, SQL, Python.</li>
+          </ul>
+          <span class="impact">Unified customer 360</span>
+        </article>
+        <article class="case-card">
+          <h3>Industrial AI And Digital Twin Products</h3>
+          <ul>
+            <li><strong>Problem:</strong> Reactive plant operations and manual optimization.</li>
+            <li><strong>Action:</strong> Shaped predictive analytics, digital twin and reinforcement-learning products.</li>
+            <li><strong>Technology:</strong> Python, ML, time-series, reinforcement learning, industrial IoT.</li>
+          </ul>
+          <span class="impact">Predictive operational decisioning</span>
+        </article>
+        <article class="case-card">
+          <h3>Commercial Analytics And Revenue Intelligence</h3>
+          <ul>
+            <li><strong>Problem:</strong> Need to quantify value and support strategic customer decisions.</li>
+            <li><strong>Action:</strong> Built ROI, profitability and market intelligence analytics for sales enablement.</li>
+            <li><strong>Technology:</strong> Python, Tableau, financial modeling, analytics automation.</li>
+          </ul>
+          <span class="impact">USD 200M revenue influence</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="technology">
+      <div class="section-head">
+        <h2>Technology And Methods</h2>
+        <p class="section-note">Grouped by the capabilities a Head of Data Team is expected to lead and govern.</p>
+      </div>
+      <div class="tech-cloud">
+        <span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">GCP</span><span class="pill">Snowflake</span><span class="pill">Databricks</span>
+        <span class="pill">Data Vault 2.0</span><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Airflow</span><span class="pill">FastAPI</span>
+        <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Scikit-learn</span><span class="pill">TensorFlow</span><span class="pill">Time-series forecasting</span>
+        <span class="pill">Digital Twin</span><span class="pill">Reinforcement Learning</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">Data Governance</span>
+        <span class="pill">Collibra framing</span><span class="pill">Data quality</span><span class="pill">Agile delivery</span><span class="pill">Kanban intake</span>
+      </div>
+    </section>
+
+    <footer>
+      Built as an interview reference portfolio. Content is based on career profile, Siemens role preparation, LinkedIn senior-role benchmarking and the current data/governance operating model.
+    </footer>
+  </main>
+</body>
+</html>
