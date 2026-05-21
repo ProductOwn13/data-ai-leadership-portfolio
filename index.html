@@ -676,6 +676,46 @@
       line-height: 1.35;
     }
 
+    .shoe-principle {
+      margin-top: 34px;
+      padding: 28px 0 8px;
+      border-top: 1px solid var(--line);
+    }
+
+    .shoe-panel {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+      align-items: center;
+      gap: 34px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px 28px;
+    }
+
+    .shoe-panel img {
+      width: 100%;
+      max-width: 360px;
+      display: block;
+      object-fit: contain;
+      justify-self: center;
+    }
+
+    .shoe-copy h2 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.1;
+    }
+
+    .shoe-copy p {
+      margin: 8px 0 0;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.2;
+      font-weight: 800;
+      font-style: italic;
+      color: #111;
+    }
+
     footer {
       padding: 28px 0 8px;
       color: var(--muted);
@@ -684,7 +724,7 @@
     }
 
     @media (max-width: 980px) {
-      .hero, .grid-3, .grid-2, .readiness, .case, .timeline {
+      .hero, .grid-3, .grid-2, .readiness, .case, .timeline, .shoe-panel {
         grid-template-columns: 1fr;
       }
 
@@ -757,6 +797,11 @@
       .eco-col { border-right: 0; border-bottom: 1px solid var(--line); }
       .eco-col:last-child { border-bottom: 0; }
       .hero { min-height: auto; }
+      .shoe-panel {
+        padding: 18px;
+        gap: 18px;
+        text-align: center;
+      }
     }
 
     @media print {
@@ -790,7 +835,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <div class="eyebrow">Head of Data - Platform & Enablement</div>
-        <h1 id="hero-title">Platform enablement leader helping domain teams scale data products in a data mesh operating model.</h1>
+        <h1 id="hero-title">Partnering "Shift left"</h1>
         <p class="subtitle">
           Siemens-scale data leader enabling domain teams with shared platform capabilities, governed Data Vault patterns, Collibra workflows, dbt standards, data quality, MLOps and reliable delivery foundations.
         </p>
@@ -876,7 +921,7 @@
         <h2>Role-Critical Strengths</h2>
       </div>
       <div class="skill-grid">
-        <article class="card skill"><span class="rank">1</span><h3>Stakeholder influence</h3><p>Earn trust. Drive adoption. No authority required.</p></article>
+        <article class="card skill"><span class="rank">1</span><h3>Domain collaboration</h3><p>Earn trust. Drive adoption. No authority required.</p></article>
         <article class="card skill"><span class="rank">2</span><h3>Trusted data</h3><p>Govern quality, lineage and contracts as domains scale.</p></article>
         <article class="card skill"><span class="rank">3</span><h3>Platform as a product</h3><p>Build foundations. Enable domain teams to ship independently.</p></article>
         <article class="card skill"><span class="rank">4</span><h3>Data mesh maturity strategy</h3><p>Sequence autonomy. Decide what to build, enforce and hand off.</p></article>
@@ -1126,6 +1171,16 @@
         <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Scikit-learn</span><span class="pill">TensorFlow</span><span class="pill">Time-series forecasting</span>
         <span class="pill">Digital Twin</span><span class="pill">Reinforcement Learning</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">Data Governance</span>
         <span class="pill">Collibra governance</span><span class="pill">Data quality</span><span class="pill">Agile delivery</span><span class="pill">Kanban intake</span>
+      </div>
+    </section>
+
+    <section class="shoe-principle" aria-label="Platform principle">
+      <div class="shoe-panel">
+        <img src="https://assets.adidas.com/images/w_840,h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a74dde047a96470988501ad069f62e2e_9366/ultraboost-5-strung-shoes.jpg" alt="Black Adidas Ultraboost 5 shoe">
+        <div class="shoe-copy">
+          <h2>Platform needs to be like a shoe</h2>
+          <p>Dad shoe | Running | Office</p>
+        </div>
       </div>
     </section>
 
